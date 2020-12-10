@@ -1,10 +1,17 @@
 <template>
   <div id="app">
     <header id="header">
-      <h1>Recipe Mash</h1>
       <nav>
-        <router-link to="/"><i class="fas fa-home">Home</i></router-link>
-        <router-link to="/dashboard"><i class="fas fa-file-upload"></i>Upload Recipe</router-link>
+        <router-link to="/">
+          <h1>Recipe Mash</h1>
+        </router-link>
+        <router-link to="/add-recipe">
+          <div class="upload-button">
+            <i class="upload-icon fas fa-file-upload">
+            </i>
+            <h1>Add</h1>
+          </div>
+        </router-link>
       </nav>
     </header>
     <router-view />
@@ -23,14 +30,10 @@ body {
   margin: 0px 200px;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-}
-
 h1 {
-  color: #fff;
+  color: rgb(0, 0, 0);
   font-size: 18px;
+  float: left;
 }
 
 h2 {
@@ -38,6 +41,9 @@ h2 {
 }
 
 #header .fas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 25px;
   color: #000;
   width: 50px;
@@ -45,5 +51,14 @@ h2 {
 
 .pure-button-primary {
   background-color: #277E8E;
+}
+
+.upload-button {
+  float: right;
+  display: flex;
+}
+
+.upload-icon {
+  width: 25px !important;
 }
 </style>
