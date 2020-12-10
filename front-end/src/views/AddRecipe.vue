@@ -40,12 +40,12 @@ export default {
   name: 'add-recipe',
   data() {
     return {
-      title: "",
+      title: '',
       url: '',
       file: null,
-      ingredients: "",
-      instructons: "",
-      submittedBy: ""
+      ingredients: '',
+      instructons: '',
+      submittedBy: ''
     }
   },
   computed: {
@@ -72,6 +72,14 @@ export default {
       }
       this.$root.$data.nextId++;
       this.$root.$data.recipes.push(newRecipe);
+
+      this.url = '';
+      this.title = '',
+      this.url = '',
+      this.file = null,
+      this.ingredients = '',
+      this.instructions = '',
+      this.submittedBy = ''
     }
   }
 }

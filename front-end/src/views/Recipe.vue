@@ -54,7 +54,7 @@ export default {
 }
 
 .recipeInstructions {
-  margin: 0;
+  margin: 0 0 40px 0;
 }
 
 h4 {
